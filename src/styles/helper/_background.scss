@@ -1,0 +1,48 @@
+.bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &-home-work-1 {
+    background-image: url(./assets/images/homepage-work1-bg.svg);
+  }
+  &-home-work-2 {
+    background-image: url(./assets/images/homepage-work2-lg.svg);
+  }
+  &-home-work-3 {
+    background-image: url(./assets/images/homepage-work3-bg.svg);
+  }
+
+  &-footer-lg {
+    background-image: url(./assets/images/footer-bg-lg.svg);
+  }
+}
+
+
+.mask {
+  &-dark-4h {
+    &::before {
+      content: "";
+      display: block;
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0,0,0,0.4);
+    }
+  }
+
+  &-dark-4 {
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0,0,0,0.4);
+    }
+  }
+}
