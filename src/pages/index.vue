@@ -43,7 +43,7 @@
 
     <section class="pt-9">
       <SectionTitle class="pb-8" content="作品介紹" />
-      <div class="bg-home-work-1 mask-dark-4">
+      <div class="bg bg-home-work-1 mask-dark-4">
         <div
           class="container d-flex justify-content-space-between align-items-center"
         >
@@ -77,7 +77,7 @@
           </div>
         </div>
       </div>
-      <div class="bg-home-work-2 mask-dark-4h">
+      <div class="bg bg-home-work-2 mask-dark-4h">
         <div class="container">
           <div class="col-5 px-200">
             <div class="work fc-white">
@@ -108,7 +108,7 @@
           </div>
         </div>
       </div>
-      <div class="bg-home-work-3 mask-dark-4">
+      <div class="bg bg-home-work-3 mask-dark-4">
         <div
           class="container d-flex justify-content-space-between align-items-center"
         >
@@ -163,13 +163,35 @@
     <section class="px-9">
       <SectionTitle class="pb-8" content="精選文章" />
       <div class="container">
-        <div class="row d-flex justify-content-space-between gap-4">
+        <div class="row ">
+          <ul class="articles d-flex justify-content-space-between gap-4 mb-6">
+            <li class="col-4" v-for="(article, id) in articles" :key="id">
+              <a href="#" class="article_header">
+                <img :src="article.imgSrc" :alt="article.title" class="mb-3">
+                <h4 class="h5b mb-3">{{ article.title }}</h4>
+              </a>
+              <div class="article_footer d-flex justify-content-space-between">
+                <ul class="tags" v-for="tag in article.tags" :key="tag">
+                  <li>
+                    <a href="#" class="tag tag-gray fs-6">{{ tag }}</a>
+                  </li>
 
+                </ul>
+                <span class="fs-6">{{ article.date }}</span>
+              </div>
+            </li>
+          </ul>
+          <ul class="article-dots d-flex justify-content-center gap-3">
+            <li v-for="(_, id) in articles" :key="id">
+              <a href="#" class="dot"></a>
+            </li>
+          </ul>
         </div>
+        
       </div>
     </section>
 
-    <footer class="px-8 bg-footer-lg">
+    <footer class="px-8 bg bg-footer-lg">
       <div class="container">
         <div class="row d-flex justify-content-space-between">
           <div class="col-4">
@@ -209,6 +231,9 @@
   import ServiceUIIcon from '../assets/icons/service-item-ui.svg';
   import ServiceHTMLCSSIcon from '../assets/icons/service-item-html&css.svg';
   import ServiceFrontEndIcon from '../assets/icons/service-item-front-end.svg';
+  import Article1Image from '../assets/images/article-image1.svg';
+  import Article2Image from '../assets/images/article-image2.svg';
+  import Article3Image from '../assets/images/article-image3.svg';
 
   import SectionTitle from '../components/SectionTitle.vue';
   import ServiceCard from '../components/ServiceCard.vue';
@@ -292,7 +317,27 @@
             src: ServiceFrontEndIcon,
             title: '前端開發',
           },
-        ]
+        ],
+        articles: [
+          {
+            imgSrc: Article1Image,
+            title: 'Vision Pro 登場！Vision Pro UI/UX 設計重點大公開 (上)',
+            date: '2024/02/10',
+            tags: ['UI/UX 新知'],
+          },
+          {
+            imgSrc: Article2Image,
+            title: '給設計師和工程師的 Figma-Dev Mode 開發模式使用指南 (下)',
+            date: '2023/11/20',
+            tags: ['UI/UX 新知'],
+          },
+          {
+            imgSrc: Article3Image,
+            title: '給設計師和工程師的 Figma-Dev Mode 開發模式使用指南 (上)',
+            date: '2023/10/18',
+            tags: ['UI/UX 新知'],
+          },
+        ],
       };
     },
   };
@@ -447,6 +492,11 @@
           background: #000;
         }
       }
+
+      &-gray {
+        color: #3b3b3b;
+        background: #f1f1f1;
+      }
     }
   }
 
@@ -471,6 +521,13 @@
         border-color: #c1c1c1;
       }
     }
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #e9e9e9;
   }
 
   footer {
