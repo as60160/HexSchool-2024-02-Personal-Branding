@@ -5,7 +5,7 @@
         <a href="#" class="logo">
           <img src="../assets/icons/logo.svg" alt="logo" />
         </a>
-        <ul class="menu">
+        <ul class="menu d-flex d-lg-none align-items-center  gap-6">
           <li
             :class="{ 'menu-item': true }"
             v-for="item in menuItems"
@@ -24,7 +24,9 @@
       <div class="introduction">
         <h1 class="h1 mb-4 fc-7">Hi！我是 Noel</h1>
         <p class="fs-5 mb-2 fc-6">
-          具有 10 年經驗的 <span class="mark">資深 UI 設計師</span> 兼
+          具有 10 年經驗的 
+          <span class="mark">資深 UI 設計師</span> 
+          兼
           <span class="mark">前端工程師</span>
         </p>
         <p class="fs-5 mb-3 fc-6">技術雙修並行，熱衷於優化使用者的網頁體驗</p>
@@ -177,7 +179,7 @@
                   </li>
 
                 </ul>
-                <span class="fs-6">{{ article.date }}</span>
+                <span class="fs-6 fc-6">{{ article.date }}</span>
               </div>
             </li>
           </ul>
@@ -200,7 +202,7 @@
             <p class="fs-5 mb-4">歡迎填寫表單，或直接與我聯絡！</p>
             <a href="mailto:service@hexschool.com" class="h5 fc-5">service@hexschool.com</a>
           </div>
-          <div class="col-3">
+          <div class="col-4">
             <div class="btn-group">
               <a href="#" class="btn btn-dark">
                 <img src="../assets/icons/list.svg" alt="list" class="icon">
@@ -218,7 +220,6 @@
           </div>
         </div>
       </div>
-      
     </footer>
   </div>
 </template>
@@ -381,9 +382,6 @@
   }
 
   .menu {
-    display: flex;
-    align-items: center;
-    gap: 40px;
 
     &-link {
       padding: 4px 8px;
@@ -478,6 +476,7 @@
   .tags {
     display: flex;
     gap: 16px;
+    flex-wrap: wrap;
 
     .tag {
       padding: 4px 12px;
@@ -536,6 +535,8 @@
     }
 
     .btn {
+      max-width: 306px;
+      margin-left: auto;
       padding: 8px 24px;
       border-radius: 8px;
       line-height: 72px;
@@ -546,7 +547,7 @@
       border: 1px solid #c1c1c1;
 
       &:hover {
-        transform: scale(1.1);
+        transform: scale(0.95);
       }
 
       &:active {

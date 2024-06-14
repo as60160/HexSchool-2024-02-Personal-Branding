@@ -1,0 +1,17 @@
+@mixin desktop {
+  @media screen and (max-width: $breakpoint-lg) {
+    @content
+  }
+}
+
+@mixin pad {
+  @media screen and (max-width: $breakpoint-md) {
+    @content
+  }
+}
+
+@mixin phone {
+  @media screen and (max-width: $breakpoint-sm) {
+    @content
+  }
+}
