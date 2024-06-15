@@ -17,12 +17,15 @@
       </div>
     </header>
 
-    <section class="d-flex flex-row-reverse align-items-center pt-96">
-      <div class="wrap-60">
+    <section class="d-flex flex-row-reverse flex-lg-column align-items-center pt-96">
+      <div class="col-7 col-lg">
         <img src="../assets/images/hero-lg.svg" alt="hero-lg" />
       </div>
+      <div class="d-none">
+        <img src="../assets/images/hero-sm.svg" alt="hero-sm" />
+      </div>
       <div class="introduction">
-        <h1 class="h1 mb-4 fc-7">Hi！我是 Noel</h1>
+        <h1 class="h1 mb-4 fc-7 text-lg-center">Hi！我是 Noel</h1>
         <p class="fs-5 mb-2 fc-6">
           具有 10 年經驗的 
           <span class="mark">資深 UI 設計師</span> 
@@ -33,7 +36,7 @@
         <p class="fs-6 fc-4">
           WEB DEVELOPMENT / BRANDING / UI / UX / APP DESIGN
         </p>
-        <ul class="icon d-flex">
+        <ul class="icon d-flex justify-content-lg-center">
           <li class="icon-item" v-for="item in socialItems">
             <a :href="item.link" class="icon-link">
               <img :src="item.src" :alt="item.name" />
@@ -49,10 +52,10 @@
         <div
           class="container d-flex justify-content-space-between align-items-center"
         >
-          <div class="col-7 align-self-end">
+          <div class="col-7 col-lg-5 align-self-end">
             <img src="../assets/images/homepage-work1.svg" alt="work1" />
           </div>
-          <div class="col-5 pl-55 px-200">
+          <div class="col-5 col-lg-7 pl-55 px-200">
             <div class="work fc-white">
               <div class="work-header">
                 <h3 class="h3 mb-2">星際旅行訂票平台</h3>
@@ -114,10 +117,10 @@
         <div
           class="container d-flex justify-content-space-between align-items-center"
         >
-          <div class="col-7">
+          <div class="col-7 col-lg-5">
             <img src="../assets/images/homepage-work3.svg" alt="work3" />
           </div>
-          <div class="col-5 pl-55 px-200">
+          <div class="col-5 col-lg-7 pl-55 px-200">
             <div class="work fc-white">
               <div class="work-header">
                 <h3 class="h3 mb-2">醫美診所官網</h3>
@@ -149,7 +152,7 @@
     <section class="px-9">
       <SectionTitle class="pb-8" content="服務項目" />
       <div class="container">
-        <div class="row mb-8 d-flex justify-content-space-between gap-4">
+        <div class="row mb-8 d-flex flex-wrap justify-content-space-between gap-4">
           <ServiceCard :services="services"/>
         </div>
         <div class="row text-center">
@@ -196,13 +199,13 @@
     <footer class="px-8 bg bg-footer-lg">
       <div class="container">
         <div class="row d-flex justify-content-space-between">
-          <div class="col-4">
+          <div class="col-6">
             <img src="../assets/icons/logo.svg" alt="logo" class="logo mb-4">
             <p class="fs-5">若有數位產品設計和開發相關問題</p>
             <p class="fs-5 mb-4">歡迎填寫表單，或直接與我聯絡！</p>
             <a href="mailto:service@hexschool.com" class="h5 fc-5">service@hexschool.com</a>
           </div>
-          <div class="col-4">
+          <div class="col-6">
             <div class="btn-group">
               <a href="#" class="btn btn-dark">
                 <img src="../assets/icons/list.svg" alt="list" class="icon">

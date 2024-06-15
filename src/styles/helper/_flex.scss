@@ -52,5 +52,162 @@
 
 
 @include desktop () {
+  // direction
+  .flex-lg-row {
+    flex-direction: row;
+  }
 
+  .flex-lg-row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .flex-lg-column {
+    flex-direction: column;
+  }
+
+  // wrap
+  .flex-lg-wrap {
+    flex-wrap: wrap;
+  }
+
+  .gap-lg-3 {
+    gap: $spacing-3;
+  }
+
+  .gap-lg-4 {
+    gap: $spacing-4;
+  }
+
+  .gap-lg-6 {
+    gap: $spacing-6;
+  }
+
+  // align
+  .justify-content-lg-center {
+    justify-content: center;
+  }
+
+  .justify-content-lg-end {
+    justify-content: end;
+  }
+
+  .justify-content-lg-space-between {
+    justify-content: space-between;
+  }
+
+  .align-items-lg-center {
+    align-items: center;
+  }
+
+  .align-self-lg-end {
+    align-self: flex-end;
+  }
+}
+
+
+@include pad () {
+  // direction
+  .flex-md-row {
+    flex-direction: row;
+  }
+
+  .flex-md-row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .flex-md-column {
+    flex-direction: column;
+  }
+
+  // wrap
+  .flex-md-wrap {
+    flex-wrap: wrap;
+  }
+
+  .gap-md-3 {
+    gap: $spacing-3;
+  }
+
+  .gap-md-4 {
+    gap: $spacing-4;
+  }
+
+  .gap-md-6 {
+    gap: $spacing-6;
+  }
+
+  // align
+  .justify-content-md-center {
+    justify-content: center;
+  }
+
+  .justify-content-md-end {
+    justify-content: end;
+  }
+
+  .justify-content-md-space-between {
+    justify-content: space-between;
+  }
+
+  .align-items-md-center {
+    align-items: center;
+  }
+
+  .align-self-md-end {
+    align-self: flex-end;
+  }
+}
+
+
+@include phone () {
+  // direction
+  .flex-sm-row {
+    flex-direction: row;
+  }
+
+  .flex-sm-row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .flex-sm-column {
+    flex-direction: column;
+  }
+
+  // wrap
+  .flex-sm-wrap {
+    flex-wrap: wrap;
+  }
+
+  .gap-sm-3 {
+    gap: $spacing-3;
+  }
+
+  .gap-sm-4 {
+    gap: $spacing-4;
+  }
+
+  .gap-sm-6 {
+    gap: $spacing-6;
+  }
+
+  // align
+  .justify-content-sm-center {
+    justify-content: center;
+  }
+
+  .justify-content-sm-end {
+    justify-content: end;
+  }
+
+  .justify-content-sm-space-between {
+    justify-content: space-between;
+  }
+
+  .align-items-sm-center {
+    align-items: center;
+  }
+
+  .align-self-sm-end {
+    align-self: flex-end;
+  }
 }

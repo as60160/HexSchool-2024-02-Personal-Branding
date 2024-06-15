@@ -11,8 +11,10 @@
 
 <style scoped lang="scss">
   .service-card {
-    width: 100%;
-    height: 306px;
+    width: 23%;
+    max-width: 300px;
+    height: 23vw;
+    max-height: 306px;
     padding: 20px 30px;
     border-radius: 16px;
     background: linear-gradient(315deg, #1E1E1E 0%, #1E1E1E 49.97%, #000000 50%);
@@ -22,5 +24,12 @@
     align-items: center;
     justify-content: center;
     gap: 24px;
+
+    @media screen and (max-width: 992px) {
+      width: 48%;
+      max-width: 450px;
+      height: 48vw;
+      max-height: 450px;
+    }
   }
 </style>

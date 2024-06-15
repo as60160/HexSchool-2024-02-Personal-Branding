@@ -110,3 +110,9 @@
   font-size: $fs-6;
   line-height: 1.5;
 }
+
+@include desktop() {
+  .text-lg-center {
+    text-align: center;
+  }
+}
